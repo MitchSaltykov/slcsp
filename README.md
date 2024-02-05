@@ -60,9 +60,9 @@ We'll want to compile your code from source and run it from a Unix-like command 
 I wrote this in the IntelliJ Community Edition IDE, running on Ruby 3.1.2p20 under Windows WSL Ubuntu.
 
 For a more general command-line solution it could make sense to take the file names as command line arguments via ARGV, but I opted for hardcoding them to make running the solution more straightforward. To run the solution, open a prompt in the directory with the solution script and the CSVs and run:
-ruby -r './slcsp.rb' -e 'SLCSP.process'
+`ruby -r './slcsp.rb' -e 'SLCSP.process'`
 . To check the tests in specs/slcsp_spec.rb, run
-rspec
+`rspec`
 .
 
 I noticed that nearly half of the output rows did not have a SLCSP value, which seemed surprising., but they met the criteria in the exercise:
