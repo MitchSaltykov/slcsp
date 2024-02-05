@@ -69,3 +69,5 @@ I noticed that nearly half of the output rows did not have a SLCSP value, which 
 - Several of the zip codes were for states with no data in the plans.csv file provided, like 40813 in KY and 06239 in CT.
 - Others had ambiguous state areas like 54923 in WI 13 / WI 11, and 46706 in IN 4 / IN 3.
 - Some only had a single rate entry, and therefore no second-lowest rate, like 07184 and 07734.
+
+I've included a sample output file for reference in slcsp_output.csv, which I found useful for manually spot-checking the above edge cases.
