@@ -1,0 +1,2 @@
+# slcsp
+SLCSP exercise solution
