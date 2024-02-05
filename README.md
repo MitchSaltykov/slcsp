@@ -54,3 +54,18 @@ the rate area for that ZIP code. A ZIP code can also be in more than one rate ar
 and should be left blank.
 
 We'll want to compile your code from source and run it from a Unix-like command line, so please include the complete instructions for doing so in a COMMENTS file.
+
+## Solution notes
+
+I wrote this in the IntelliJ Community Edition IDE, running on Ruby 3.1.2p20 under Windows WSL Ubuntu.
+
+For a more general command-line solution it could make sense to take the file names as command line arguments via ARGV, but I opted for hardcoding them to make running the solution more straightforward. To run the solution, open a prompt in the directory with the solution script and the CSVs and run:
+ruby -r './slcsp.rb' -e 'SLCSP.process'
+. To check the tests in specs/slcsp_spec.rb, run
+rspec
+.
+
+I noticed that nearly half of the output rows did not have a SLCSP value, which seemed surprising., but they met the criteria in the exercise:
+- Several of the zip codes were for states with no data in the plans.csv file provided, like 40813 in KY and 06239 in CT.
+- Others had ambiguous state areas like 54923 in WI 13 / WI 11, and 46706 in IN 4 / IN 3.
+- Some only had a single rate entry, and therefore no second-lowest rate, like 07184 and 07734.
